@@ -60,7 +60,7 @@ class FortifyServiceProvider extends ServiceProvider
             return view('auth.verify');
         });
 
-        // ini untuk aktikan forgot password
+        // ini untuk aktikan forgot password dan mengambil data request user
         Fortify::resetPasswordView(function (Request $request) {
             return view('auth.reset', ['request' => $request]);
         });

@@ -19,6 +19,7 @@
         @endif
 
         <div class="card-body">
+            {{-- add ini untuk kirim ulang email verify --}}
             <form method="POST" action="{{ route('verification.send') }}" class="needs-validation" novalidate="">
                 @csrf
                 <div class="form-group">

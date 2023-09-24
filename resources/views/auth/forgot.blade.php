@@ -19,6 +19,7 @@
                     {{ session('status') }}
                 </div>
             @endif
+            {{-- <-- ini untuk forgot passwod --> --}}
             <form method="POST" action="{{ route('password.email') }}">
                 @csrf
                 <div class="form-group">

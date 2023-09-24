@@ -55,10 +55,12 @@ class FortifyServiceProvider extends ServiceProvider
             return view('auth.forgot');
         });
 
+        //aktifkan ini untuk emmail verify
         Fortify::verifyEmailView(function () {
             return view('auth.verify');
         });
 
+        // ini untuk aktikan forgot password
         Fortify::resetPasswordView(function (Request $request) {
             return view('auth.reset', ['request' => $request]);
         });

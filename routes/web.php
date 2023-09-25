@@ -21,7 +21,7 @@ Route::get('/', function () {
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('home', function () {
         return view('pages.blank-page', ['type_menu' => '']);
-    })->name('home');
+    })->name('home')->middleware('can:dashboard');
 });
 
 

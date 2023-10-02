@@ -22,5 +22,12 @@ class UserSeeder extends Seeder
             'email_verified_at'  => now(),
             'password' => Hash::make('123456'),
         ]);
+        User::create([
+            'name' => 'Andi Zunaidi',
+            'email' => 'superadmin@gmail.com',
+            'role' => 'superadmin',
+            'email_verified_at'  => now(),
+            'password' => Hash::make('123456'),
+        ]);
     }
 }

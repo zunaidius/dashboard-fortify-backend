@@ -14,13 +14,15 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(5)->create();
+        User::factory(30)->create();
         User::create([
             'name' => 'Andi Zunaidi',
             'email' => 'superuser@gmail.com',
             'role' => 'admin',
             'email_verified_at'  => now(),
             'password' => Hash::make('123456'),
+            'phone' => '081336487526',
+            'bio' => 'semangat belajar',
         ]);
         User::create([
             'name' => 'Andi Zunaidi',
@@ -28,6 +30,8 @@ class UserSeeder extends Seeder
             'role' => 'superadmin',
             'email_verified_at'  => now(),
             'password' => Hash::make('123456'),
+            'phone' => '081336487526',
+            'bio' => 'semangat belajar',
         ]);
     }
 }
